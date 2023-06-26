@@ -1,0 +1,15 @@
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.csproj.AssemblyReference.cache
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.AssemblyInfoInputs.cache
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.AssemblyInfo.cs
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\ScreenSound2.exe
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\ScreenSound2.deps.json
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\ScreenSound2.runtimeconfig.json
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\ScreenSound2.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\ScreenSound2.pdb
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\refint\ScreenSound2.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.pdb
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.genruntimeconfig.cache
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ref\ScreenSound2.dll

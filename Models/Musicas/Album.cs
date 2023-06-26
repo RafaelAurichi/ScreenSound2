@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Channels;
 using System.Threading.Tasks;
 
-namespace ScreenSound2
+namespace ScreenSound2.Models.Musicas
 {
     public class Album
     {
@@ -14,6 +14,8 @@ namespace ScreenSound2
         {
             Artista = artista;
             Nome = nome;
+
+            artista.AddAlbum(this); 
         }
 
         //atributos
@@ -23,14 +25,24 @@ namespace ScreenSound2
         public int DuracaoAlbum => musicas.Sum(x => x.Duracao);
 
         //métodos
-        public void AdicionarMusicas(Musica musica) => musicas.Add(musica);
+        public void AddMusicas(Musica musica) //can be set in the music constructor
+        {
+            if(musicas.Contains(musica)) { }
+            else
+            {
+                musicas.Add(musica);
+            }
+        }
+
         public void ExibirMusicas()
         {
-            Console.WriteLine($"\nLista de músicas do álbum {Nome} do(a) artista {Artista.Nome}\n");
+            Console.WriteLine($"\nLista de músicas do álbum {Nome} do(a) artista {Artista.Nome}:");
 
             musicas.ForEach(x => Console.WriteLine($"Música: {x.Nome}"));
 
-            Console.WriteLine($"\nPara ouvir o álbum {Nome} inteiro você precisa de {DuracaoAlbum}s\n");
+            Console.WriteLine($"Duração do álbum {Nome}: {DuracaoAlbum}s\n");
+
+            //*******************FUNCAO PARA SELECIONAR ALBUM E VER SUA LISTA DE MUSICAS
         }
     }
 }

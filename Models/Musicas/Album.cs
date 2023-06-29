@@ -70,23 +70,23 @@ namespace ScreenSound2.Models.Musicas
                 int horasMusica = minutosMusica / 60;
                 if (horasMusica > 0)
                 {
-                    Console.WriteLine($"Música: {x.Nome} ({horasMusica}:{minutosMusica % 60} horas)");
+                    Console.WriteLine($"Música: {x.Nome} ({horasMusica}:{(minutosMusica % 60 < 10 ? "0" + minutosMusica % 60 : minutosMusica % 60)} horas)");
                 }
                 else
                 {
-                    Console.WriteLine($"Música: {x.Nome} ({minutosMusica}:{x.DuracaoSeg % 60} minutos)");
+                    Console.WriteLine($"Música: {x.Nome} ({minutosMusica}:{(x.DuracaoSeg % 60 < 10 ? "0" + x.DuracaoSeg % 60 : x.DuracaoSeg % 60)} minutos)");
                 }
             }
 
-            int minutos = DuracaoAlbumSeg / 60;
-            int horas = minutos / 60;
-            if (horas > 0)
+            int minutosAlbum = DuracaoAlbumSeg / 60;
+            int horasAlbum = minutosAlbum / 60;
+            if (horasAlbum > 0)
             {
-                Console.WriteLine($"\nDuração do álbum {Nome}: {horas}:{minutos % 60} horas\n");
+                Console.WriteLine($"\nDuração do álbum {Nome}: {horasAlbum}:{(minutosAlbum % 60 < 10 ? "0" + minutosAlbum % 60 : minutosAlbum % 60)} horas\n");
             }
             else
             {
-                Console.WriteLine($"\nDuração do álbum {Nome}: {minutos}:{DuracaoAlbumSeg % 60} minutos\n");
+                Console.WriteLine($"\nDuração do álbum {Nome}: {minutosAlbum}:{(DuracaoAlbumSeg % 60 < 10 ? "0" + DuracaoAlbumSeg % 60 : DuracaoAlbumSeg % 60)} minutos\n");
             }
         }
     }

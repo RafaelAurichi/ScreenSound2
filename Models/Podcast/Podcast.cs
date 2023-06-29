@@ -65,8 +65,6 @@ namespace ScreenSound2.Models.Podcast
             Console.WriteLine($"\nO podcast {Nome} é hosteado por {Host}");
             Console.WriteLine($"Lista de episódios ({episodios.Count}):");
             episodios.ForEach(x => Console.WriteLine($"Episódio {x.Ordem}: {x.Titulo}"));
-
-            ////*******************FUNCAO PARA SELECIONAR EP E VER SEU RESUMO
         }
     }
 }

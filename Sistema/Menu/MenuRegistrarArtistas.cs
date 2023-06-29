@@ -1,9 +1,5 @@
 ﻿using ScreenSound2.Models.Musicas;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using OpenAI_API;
 
 namespace ScreenSound2.Sistema.Menu
 {
@@ -31,6 +27,17 @@ namespace ScreenSound2.Sistema.Menu
             {
                 Artista artista = new(nomeArtista);
                 listaArtistas.Add(artista.Nome, artista);
+
+                Console.WriteLine($"\nAguarde...");
+
+                //API OpenAI
+                var client = new OpenAIAPI("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");
+                var chat = client.Chat.CreateConversation();
+                chat.AppendSystemMessage($"Faça uma breve descrição de 1 parágrafo da banda ou artista {nomeArtista}. Adote um estilo informal.");
+                string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
+
+                artista.Resumo = resposta;
+
                 Console.WriteLine($"A banda {nomeArtista} foi registrada com sucesso!");
                 Console.WriteLine("\nClique qualquer tecla para voltar.");
                 Console.ReadLine();

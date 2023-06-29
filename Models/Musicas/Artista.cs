@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Channels;
-using System.Threading.Tasks;
+﻿using System.Text.Json.Serialization;
 
 namespace ScreenSound2.Models.Musicas
 {
@@ -26,35 +19,38 @@ namespace ScreenSound2.Models.Musicas
         private List<double> notas = new();
 
         public static int QuantArtistas { get; private set; }
+
+        [JsonPropertyName("artist")]
         public string Nome { get; }
+        public string? Resumo { get; set; }
         public int QuantAlbuns => albuns.Count;
         public int QuantMusicas => musicas.Count;
 
 
         //métodos
-        public bool GetAlbum(string nome)
+        public Album GetAlbum(string nome)
         {
             if (albuns.ContainsKey(nome))
             {
-                albuns[nome].ExibirMusicas();
-                return true;
+                return albuns[nome];
             }
             else
             {
                 Console.WriteLine($"\nO álbum {nome} não foi encontrado!");
-                return false;
+                return null;
             }
         }
 
-        public void GetMusica(string nome)
+        public Musica GetMusica(string nome)
         {
             if (musicas.ContainsKey(nome))
             {
-                musicas[nome].ExibirFichaTecnica();
+                return musicas[nome];
             }
             else
             {
                 Console.WriteLine($"\nA música {nome} não foi encontrada!");
+                return null;
             }
         }
 
@@ -83,7 +79,10 @@ namespace ScreenSound2.Models.Musicas
 
         public void ExibirDiscografia()
         {
+            Console.WriteLine($"{Resumo}");
+
             Console.WriteLine($"\nDiscografia do(a) artista {Nome}:\n");
+
             if (QuantAlbuns == 0)
             {
                 Console.WriteLine($"O artista ou banda {Nome} não possui álbuns cadastrados!");
@@ -96,11 +95,11 @@ namespace ScreenSound2.Models.Musicas
                     int horas = minutos / 60;
                     if (horas > 0)
                     {
-                        Console.WriteLine($"Álbum: {x.Nome} ({horas}:{minutos % 60} horas)");
+                        Console.WriteLine($"Álbum: {x.Nome} ({horas}:{(minutos % 60 < 10 ? "0" + minutos % 60 : minutos % 60)} horas)");
                     }
                     else
                     {
-                        Console.WriteLine($"Álbum: {x.Nome} ({minutos}:{x.DuracaoAlbumSeg % 60} minutos)");
+                        Console.WriteLine($"Álbum: {x.Nome} ({minutos}:{(x.DuracaoAlbumSeg % 60 < 10 ? "0" + x.DuracaoAlbumSeg % 60 : x.DuracaoAlbumSeg % 60)} minutos)");
                     }
                 }
             }
@@ -120,11 +119,11 @@ namespace ScreenSound2.Models.Musicas
                     int horas = minutos / 60;
                     if (horas > 0)
                     {
-                        Console.WriteLine($"Música: {x.Nome} ({horas}:{minutos % 60} horas)");
+                        Console.WriteLine($"Música: {x.Nome} ({horas}:{(minutos % 60 < 10 ? "0" + minutos % 60 : minutos % 60)} horas)");
                     }
                     else
                     {
-                        Console.WriteLine($"Música: {x.Nome} ({minutos}:{x.DuracaoSeg % 60} minutos)");
+                        Console.WriteLine($"Música: {x.Nome} ({minutos}:{(x.DuracaoSeg % 60 < 10 ? "0" + x.DuracaoSeg % 60 : x.DuracaoSeg % 60)} minutos)");
                     }
                 }
             }

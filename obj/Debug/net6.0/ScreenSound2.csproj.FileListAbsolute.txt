@@ -13,3 +13,16 @@ C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug
 C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.pdb
 C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.genruntimeconfig.cache
 C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ref\ScreenSound2.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Http.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\bin\Debug\net6.0\OpenAI_API.dll
+C:\Users\rafae\OneDrive\Área de Trabalho\CURSOS\ALURA\C#\ScreenSound2\obj\Debug\net6.0\ScreenSound2.csproj.CopyComplete

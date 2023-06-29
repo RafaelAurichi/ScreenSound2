@@ -88,11 +88,11 @@ namespace ScreenSound2.Models.Musicas
             int horas = minutos / 60;
             if (horas > 0)
             {
-                Console.WriteLine($"Duração da música {Nome}: {horas}:{minutos % 60} horas");
+                Console.WriteLine($"Duração da música {Nome}: {horas}:{(minutos % 60 < 10 ? "0" + minutos % 60 : minutos % 60)} horas");
             }
             else
             {
-                Console.WriteLine($"Duração da música {Nome}: {minutos}:{DuracaoSeg % 60} minutos");
+                Console.WriteLine($"Duração da música {Nome}: {minutos}:{(DuracaoSeg % 60 < 10 ? "0" + DuracaoSeg % 60 : DuracaoSeg % 60)} minutos");
             }
 
             switch (Disponivel)

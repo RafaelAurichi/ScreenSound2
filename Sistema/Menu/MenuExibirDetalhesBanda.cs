@@ -125,31 +125,39 @@ namespace ScreenSound2.Sistema.Menu
             Console.Write("Digite o nome do álbum que deseja detalhar: ");
             string album = Console.ReadLine();
 
-            Console.Clear();
             CabecalhoOpcoes(@"
                 █▀▀▄ █▀▀ ▀▀█▀▀ █▀▀█ █   █  █ █▀▀ █▀▀ 　  █▀▀█ █   █▀▀▄ █  █ █▀▄▀█ 
                 █  █ █▀▀   █   █▄▄█ █   █▀▀█ █▀▀ ▀▀█ 　  █▄▄█ █   █▀▀▄ █  █ █ ▀ █ 
                 █▄▄▀ ▀▀▀   ▀   ▀  ▀ ▀▀▀ ▀  ▀ ▀▀▀ ▀▀▀ 　  █  █ ▀▀▀ ▀▀▀  ▀▀▀▀ ▀   ▀
             ");
-            listaArtistas[ArtistaEscolhido].GetAlbum(album);
-            Console.Write("\nClique qualquer tecla para voltar: ");
+
+            if (listaArtistas[ArtistaEscolhido].GetAlbum(album) != null)
+            {
+                listaArtistas[ArtistaEscolhido].GetAlbum(album).ExibirMusicas();
+            }
+            
+            Console.WriteLine("\nClique qualquer tecla para voltar.");
             Console.ReadLine();
             this.Executar(listaArtistas);
         }
 
         public void DetalhesMusica(Dictionary<string, Artista> listaArtistas)
         {
-            Console.WriteLine("Digite o nome da música que deseja detalhar: ");
+            Console.Write("Digite o nome da música que deseja detalhar: ");
             string musica = Console.ReadLine();
 
-            Console.Clear();
             CabecalhoOpcoes(@"
                 █▀▀▄ █▀▀ ▀▀█▀▀ █▀▀█ █   █  █ █▀▀ █▀▀ 　   █▀▄▀█ █  █ █▀▀  ▀  █▀▀ █▀▀█
                 █  █ █▀▀   █   █▄▄█ █   █▀▀█ █▀▀ ▀▀█ 　   █ █ █ █  █ ▀▀█ ▀█▀ █   █▄▄█ 
                 █▄▄▀ ▀▀▀   ▀   ▀  ▀ ▀▀▀ ▀  ▀ ▀▀▀ ▀▀▀ 　   █   █ ▀▀▀▀ ▀▀▀ ▀▀▀ ▀▀▀ ▀  ▀
             ");
-            listaArtistas[ArtistaEscolhido].GetMusica(musica);
-            Console.Write("\nClique qualquer tecla para voltar: ");
+
+            if (listaArtistas[ArtistaEscolhido].GetMusica(musica) != null)
+            {
+                listaArtistas[ArtistaEscolhido].GetMusica(musica).ExibirFichaTecnica();
+            }
+
+            Console.WriteLine("\nClique qualquer tecla para voltar.");
             Console.ReadLine();
             this.Executar(listaArtistas);
         }

@@ -13,9 +13,9 @@ namespace ScreenSound2.Sistema.Menu
         public override void Executar(Dictionary<string, Artista> listaArtistas)
         {
             CabecalhoOpcoes(@"
-                ░█     ▀  █▀▀ ▀▀█▀▀ █▀▀█ 　 █▀▀▄ █▀▀ 　 █▀▀▄ █▀▀█ █▀▀▄ █▀▀▄ █▀▀█ █▀▀ 
-                ░█    ▀█▀ ▀▀█   █   █▄▄█ 　 █  █ █▀▀ 　 █▀▀▄ █▄▄█ █  █ █  █ █▄▄█ ▀▀█ 
-                ░█▄▄█ ▀▀▀ ▀▀▀   ▀   ▀  ▀ 　 ▀▀▀  ▀▀▀ 　 ▀▀▀  ▀  ▀ ▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀  
+                 █     ▀  █▀▀ ▀▀█▀▀ █▀▀█ 　 █▀▀▄ █▀▀ 　 █▀▀▄ █▀▀█ █▀▀▄ █▀▀▄ █▀▀█ █▀▀ 
+                 █    ▀█▀ ▀▀█   █   █▄▄█ 　 █  █ █▀▀ 　 █▀▀▄ █▄▄█ █  █ █  █ █▄▄█ ▀▀█ 
+                 █▄▄█ ▀▀▀ ▀▀▀   ▀   ▀  ▀ 　 ▀▀▀  ▀▀▀ 　 ▀▀▀  ▀  ▀ ▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀  
             ");
 
             List<string> artistas = new();
@@ -34,7 +34,7 @@ namespace ScreenSound2.Sistema.Menu
 
                 if (opcao == 0)
                 {
-                    
+                    Voltar(200);
                 }
                 else if (artistas.Contains(artistas[opcao - 1]))
                 {
@@ -61,8 +61,6 @@ namespace ScreenSound2.Sistema.Menu
                 Voltar(1000);
                 this.Executar(listaArtistas);
             }
-
-            Voltar(1000);
         }
     }
 }

@@ -35,6 +35,17 @@ Visual Studio includes the .NET framework as part of its installation. It offers
  
 When working with ````C#```` repositories, ensure that you have the appropriate ````.NET framework```` version installed that matches the project's requirements. You can manage different ````.NET framework```` versions through Visual Studio's project settings.
 
+# Generate OpenAI API Key
+Here's a quick step-by-step guide on how to create an API key for the OpenAI API, along with an explanation that the existing key expires after three months:
+ 
+ - Log in to your OpenAI account: Open your preferred web browser and navigate to the OpenAI website. Enter your username and password to log in.
+ - Access your API settings: Once you're logged in, navigate to the API settings page within your OpenAI account. This is typically found in your account or profile settings.
+ - Generate a new API key: Look for the option to generate a new API key or access token. Click on it to create a new key for your project.
+ - Provide a meaningful description: When generating the API key, you'll be asked to provide a description. Choose a description that clearly identifies the purpose of the key, such as "API key for XYZ project."
+ - Copy the generated API key: After generating the key, it will be displayed on the screen. Copy the API key and make sure to save it securely. Note that the key will not be shown again once you leave the page.
+ - Update your project with the new API key: In your project's code or configuration, replace the existing API key with the newly generated key. Make sure to use the correct variable or field to store the key.
+ - Consider key expiration: As you mentioned that the existing key expires after three months, it's crucial to keep track of the expiration date for the new API key as well. Set a reminder to renew or update the key before it expires to avoid any disruptions in your API access.
+ 
 # Contributing
 If you intend to contribute to the repository, please follow the project's guidelines and the standard GitHub workflow for contributing to repositories.
 

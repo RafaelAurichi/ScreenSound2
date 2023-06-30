@@ -25,18 +25,7 @@ namespace ScreenSound2.Sistema.Menu
             }
             else
             {
-                Artista artista = new(nomeArtista);
-                listaArtistas.Add(artista.Nome, artista);
-
-                Console.WriteLine($"\nAguarde...");
-
-                //API OpenAI
-                var client = new OpenAIAPI("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");
-                var chat = client.Chat.CreateConversation();
-                chat.AppendSystemMessage($"Faça uma breve descrição de 1 parágrafo da banda ou artista {nomeArtista}. Adote um estilo informal.");
-                string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
-
-                artista.Resumo = resposta;
+                RegistrarArtista(listaArtistas, nomeArtista);
 
                 Console.WriteLine($"A banda {nomeArtista} foi registrada com sucesso!");
                 Console.WriteLine("\nClique qualquer tecla para voltar.");
@@ -44,6 +33,30 @@ namespace ScreenSound2.Sistema.Menu
             }
 
             Voltar(200);
+        }
+
+        public static void RegistrarArtista(Dictionary<string, Artista> listaArtistas, string nome)
+        {
+            Artista artista = new(nome);
+            listaArtistas.Add(artista.Nome, artista);
+
+            var ordenados = LinqFilter.LinqOrder(listaArtistas);
+            listaArtistas.Clear();
+
+            foreach (var artistaOrdenado in ordenados.Values)
+            {
+                listaArtistas.Add(artistaOrdenado.Nome, artista);
+            }
+
+            Console.WriteLine($"\nAguarde...");
+
+            //API OpenAI
+            var client = new OpenAIAPI("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");
+            var chat = client.Chat.CreateConversation();
+            chat.AppendSystemMessage($"Faça uma breve descrição de 2 linhas da banda ou artista {nome}. Adote um estilo informal.");
+            string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
+
+            artista.Resumo = resposta;
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿using ScreenSound2.Models.Musicas;
+using ScreenSound2.Sistema;
 using ScreenSound2.Sistema.Menu;
 using System.Text.Json;
-using static System.Net.Http.HttpClient;
 
 #region TESTANDO PODCAST
 /*
@@ -34,7 +34,26 @@ Console.WriteLine($"{ep2.Resumo}");
 
 ////artistas
 
+Dictionary<string, Artista> listaArtistas = new();
 
+HttpClient client = new HttpClient();
+try
+{
+    string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
+    var artistas = JsonSerializer.Deserialize<List<Artista>>(resposta)!;
+
+    var artistasFiltrados = LinqFilter.LinqDistinctArtista(artistas);
+
+    foreach (var artista in artistasFiltrados)
+    {
+        listaArtistas.Add(artista.Key, artista.Value);
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine($"Erro: {ex.Message}");
+}
+/*
 Artista beatles = new("The Beatles");
 Artista acdc = new("AC/DC");
 Artista ternoRei = new("Terno Rei");
@@ -50,17 +69,6 @@ Dictionary<string, Artista> listaArtistas = new() {
     { guns.Nome, guns },
 };
 
-HttpClient client = new HttpClient();
-try
-{
-    string resposta = await client.GetStringAsync("https://guilhermeonrails.github.io/api-csharp-songs/songs.json");
-    var artistas = JsonSerializer.Deserialize<List<Artista>>(resposta)!;
-    listaArtistas.Add(artistas[0].Nome, artistas[0]);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Erro: {ex.Message}");
-}
 
 ////notas
 beatles.AddNotas(new List<double> { 10, 8, 9 });
@@ -211,7 +219,7 @@ new Musica(guns3, "Welcome to the Jungle", "Rock")
 {
     DuracaoSeg = 273,
 };
-
+*/
 //MENU
 ExibirMenu();
 

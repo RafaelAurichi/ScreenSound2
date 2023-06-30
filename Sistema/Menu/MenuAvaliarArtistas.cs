@@ -17,15 +17,11 @@ namespace ScreenSound2.Sistema.Menu
                 █  █   ▀   ▀  ▀ ▀▀▀ ▀▀▀ ▀  ▀ ▀ ▀▀ 　  █▄▄█ ▀  ▀ ▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀
             ");
 
-            int i = 1;
-            foreach (string x in listaArtistas.Keys)
-            {
-                Console.WriteLine($"Banda {i}: {x}");
-                i++;
-            }
 
+            ListarArtistas(listaArtistas);
             Console.Write("\nDigite o nome do artista ou banda que deseja avaliar: ");
             string nomeArtista = Console.ReadLine();
+
 
             if (nomeArtista == "0")
             {

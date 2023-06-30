@@ -23,5 +23,20 @@ namespace ScreenSound2.Sistema.Menu
         }
 
         public virtual void Executar(Dictionary<string, Artista> listaArtistas) { }
+
+        public static void ListarArtistas(Dictionary<string, Artista> listaArtistas)
+        {
+            Console.WriteLine("Lista de artistas Cadastrados: \n");
+
+            var ordenados = listaArtistas.OrderBy(listaArtistas => listaArtistas.Key);
+
+            int i = 1;
+            foreach (string x in listaArtistas.Keys)
+            {
+                Console.WriteLine($"Banda {i}: {x}");
+                i++;
+            }
+            Console.WriteLine("\n**Dica: use o atalho 'Ctrl + F' para ajudar na busca!**");
+        }
     }
 }

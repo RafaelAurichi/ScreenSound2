@@ -1,5 +1,5 @@
 # ScreenSound2
-Improvement of the previous music register in a C# console app
+Improvement of the previous music register in a C# console app. Using an external API of musics lists and OpenAI's API integration!
  
 # Prerequisites
 Before you begin, ensure that you have the following:

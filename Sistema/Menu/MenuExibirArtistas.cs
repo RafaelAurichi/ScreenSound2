@@ -13,9 +13,9 @@ namespace ScreenSound2.Sistema.Menu
         public override void Executar(Dictionary<string, Artista> listaArtistas)
         {
             CabecalhoOpcoes(@"
-                 █     ▀  █▀▀ ▀▀█▀▀ █▀▀█ 　 █▀▀▄ █▀▀ 　 █▀▀▄ █▀▀█ █▀▀▄ █▀▀▄ █▀▀█ █▀▀ 
-                 █    ▀█▀ ▀▀█   █   █▄▄█ 　 █  █ █▀▀ 　 █▀▀▄ █▄▄█ █  █ █  █ █▄▄█ ▀▀█ 
-                 █▄▄█ ▀▀▀ ▀▀▀   ▀   ▀  ▀ 　 ▀▀▀  ▀▀▀ 　 ▀▀▀  ▀  ▀ ▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀  
+            █     ▀  █▀▀ ▀▀█▀▀ █▀▀█ 　 █▀▀▄ █▀▀ 　 █▀▀▄ █▀▀█ █▀▀▄ █▀▀▄ █▀▀█ █▀▀ 
+            █    ▀█▀ ▀▀█   █   █▄▄█ 　 █  █ █▀▀ 　 █▀▀▄ █▄▄█ █  █ █  █ █▄▄█ ▀▀█ 
+            █▄▄█ ▀▀▀ ▀▀▀   ▀   ▀  ▀ 　 ▀▀▀  ▀▀▀ 　 ▀▀▀  ▀  ▀ ▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀  
             ");
 
             List<string> artistas = new();

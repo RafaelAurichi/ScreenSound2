@@ -2,7 +2,7 @@
 
 namespace ScreenSound2.Sistema
 {
-    internal class LinqFilter
+    internal class Linq
     {
         public static Dictionary<string, Artista> LinqDistinctArtista(List<Artista> artistas)
         {

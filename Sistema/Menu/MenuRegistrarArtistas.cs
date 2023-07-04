@@ -8,9 +8,9 @@ namespace ScreenSound2.Sistema.Menu
         public override void Executar(Dictionary<string, Artista> listaArtistas)
         {
             CabecalhoOpcoes(@"
-                 █▀▀█ █▀▀ █▀▀▀  ▀  █▀▀ ▀▀█▀▀ █▀▀█ █▀▀█ 　 █▀▀▄ █▀▀ 　 █▀▀▄ █▀▀█ █▀▀▄ █▀▀▄ █▀▀█ █▀▀ 
-                 █▄▄▀ █▀▀ █ ▀█ ▀█▀ ▀▀█   █   █▄▄▀ █  █ 　 █  █ █▀▀ 　 █▀▀▄ █▄▄█ █  █ █  █ █▄▄█ ▀▀█ 
-                 █  █ ▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀   ▀   ▀ ▀▀ ▀▀▀▀ 　 ▀▀▀  ▀▀▀ 　 ▀▀▀  ▀  ▀ ▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀
+            █▀▀█ █▀▀ █▀▀▀  ▀  █▀▀ ▀▀█▀▀ █▀▀█ █▀▀█ 　 █▀▀▄ █▀▀ 　 █▀▀▄ █▀▀█ █▀▀▄ █▀▀▄ █▀▀█ █▀▀ 
+            █▄▄▀ █▀▀ █ ▀█ ▀█▀ ▀▀█   █   █▄▄▀ █  █ 　 █  █ █▀▀ 　 █▀▀▄ █▄▄█ █  █ █  █ █▄▄█ ▀▀█ 
+            █  █ ▀▀▀ ▀▀▀▀ ▀▀▀ ▀▀▀   ▀   ▀ ▀▀ ▀▀▀▀ 　 ▀▀▀  ▀▀▀ 　 ▀▀▀  ▀  ▀ ▀  ▀ ▀▀▀  ▀  ▀ ▀▀▀
             ");
             Console.Write("Digite o nome da banda que deseja registrar: ");
             string nomeArtista = Console.ReadLine();
@@ -40,23 +40,23 @@ namespace ScreenSound2.Sistema.Menu
             Artista artista = new(nome);
             listaArtistas.Add(artista.Nome, artista);
 
-            var ordenados = LinqFilter.LinqOrder(listaArtistas);
+            var ordenados = Linq.LinqOrder(listaArtistas);
             listaArtistas.Clear();
 
             foreach (var artistaOrdenado in ordenados.Values)
             {
-                listaArtistas.Add(artistaOrdenado.Nome, artista);
+                listaArtistas.Add(artistaOrdenado.Nome, artistaOrdenado);
             }
 
             Console.WriteLine($"\nAguarde...");
 
             //API OpenAI
-            var client = new OpenAIAPI("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");
-            var chat = client.Chat.CreateConversation();
-            chat.AppendSystemMessage($"Faça uma breve descrição de 2 linhas da banda ou artista {nome}. Adote um estilo informal.");
-            string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
+            //var client = new OpenAIAPI("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");
+            //var chat = client.Chat.CreateConversation();
+            //chat.AppendSystemMessage($"Faça uma breve descrição de 2 linhas da banda ou artista {nome}. Adote um estilo informal.");
+            //string resposta = chat.GetResponseFromChatbotAsync().GetAwaiter().GetResult();
 
-            artista.Resumo = resposta;
+            //artista.Resumo = resposta;
         }
     }
 }
